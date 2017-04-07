@@ -57,6 +57,11 @@ void RgbLed<CommonPinType>::white() const
 {
     set(On, On, On);
 }
+template <typename CommonPinType>
+void RgbLed<CommonPinType>::off() const
+{
+    set(Off, Off, Off);
+}
 
 template <typename CommonPinType>
 void RgbLed<CommonPinType>::setup() const
@@ -66,6 +71,7 @@ void RgbLed<CommonPinType>::setup() const
     m_g.setup();
     m_b.setup();
     m_p.setup();
+    off();
 }
 
 template <typename CommonPinType>

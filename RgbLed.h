@@ -32,6 +32,7 @@ public:
     void cyan() const;
     void magenta() const;
     void white() const;
+    void off() const;
 private:
     const OutputPin& m_r;
     const CommonPinType& m_p;
